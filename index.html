@@ -50,6 +50,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: background 0.3s ease;
+            margin-bottom: 2em; /* Space between sections */
         }
         section:hover {
             background: rgba(255, 255, 255, 1); /* Fully opaque on hover */
@@ -82,7 +83,7 @@
             transform: translateX(10px); /* Slide effect */
         }
         .contact a {
-            color: #ffeb3b;
+            color: #1b3d9b;
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -99,7 +100,7 @@
 </head>
 <body>
     <header>
-        <h1>Dylan Elliott</h1>
+        <h1>Dylan Elliott's Personal Website</h1>
         <nav>
             <ul>
                 <li><a href="#intro">Home</a></li>
@@ -114,13 +115,16 @@
         <img src="tamuprofilepicture.png" alt="Dylan Elliott">
         <div>
             <h2>Hello, I'm Dylan Elliott</h2>
-            <p>Welcome to my personal website. Here you will find more about my background, projects, skills, and how you can get in touch with me.</p>
+            <p>Welcome to my personal site. Here you will find information about my background, projects, skills, and how you can get in touch with me. Thank you for visiting!</p>
         </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm Dylan Elliott, a graduate student at Texas A&M University and data analyst at Catastrophe & National Claims based in College Station, Texas. I have a passion for solving geoscience problems through programming and data analysis. With a background in Earth, Ocean, Planetary, and Atmospheric Sciences, I enjoy developing solutions to make our world more efficient and resilient through coding, math, and exceptional problem solving skills. I am looking for a full-time position to apply my skills in data analysis, numerical modeling, and machine learning to solve complex problems.</p>
+        <p>Hi!</p>
+        <p>I'm a MS graduate student at Texas A&M University and data analyst at Catastrophe & National Claims based in College Station, Texas.</p> 
+        <p>I have a passion for solving geoscience problems through programming and data analysis. With a background in Earth, Ocean, Planetary, and Atmospheric Sciences, I enjoy developing solutions to make our world more efficient and resilient through coding, math, and exceptional problem solving skills.</p>
+        <p>I am looking for a full-time position to apply my skills in data analysis, numerical modeling, and machine learning to solve complex problems. I am on track to defend my MS thesis in October 2024.</p>
     </section>
 
     <section id="projects" class="projects">
@@ -129,15 +133,16 @@
         <ul>
             <li>
                 <h3>Integrated Approach to Augment a NWP Model</h3>
-                <p>In this project, a machine learning (ML) training method called the iterative training technique was tested on a global circulation model. Traditionally, the process of data assimilation and the training of a ML model are kept separate. However, this technique integrates these two processes together, by training the next iteration of a hybrid model (one that has a ML component and a knowledge-based component) on the last analyses it produced. We found promising results using this technique and the work is still ongoing. At Texas A&M, I developed skills in high performance computing, data analysis, problem solving strategies, and a deep understanding of numerical weather prediction models, python, and FORTRAN. I am on track to defend my MS thesis in Fall 2024 and have a manuscript submitted to a top journal of the atmospheric sciences based on the results.</p>
+                <p>In this research project, a machine learning (ML) training method called the iterative training technique was tested on a global circulation model. Traditionally, the process of data assimilation and the training of a ML model are kept separate. However, this technique integrates these two processes together, by training the next iteration of a hybrid model (one that has a ML component and a knowledge-based component) on the last analyses it produced. We found promising results using this technique and the work is still ongoing. At Texas A&M, I developed skills in high performance computing, data analysis, problem solving strategies, and a deep understanding of numerical weather prediction models, python, and FORTRAN. I am on track to defend my MS thesis in Fall 2024 and have a manuscript submitted to a top journal of the atmospheric sciences based on the results.</p>
             </li>
             <li>
                 <h3>Independent Data Analyst for CNC</h3>
-                <p>At Catastrophe & National Claims, I was responsible for developing a program to efficiently pull elevation data from lidar point cloud datasets via prescribed coordinates from scratch. The program was designed to systemically process the significant amount of data required while not exceeding the performance capabilities of a standard laptop. This program was also engineered to be easily adapted to another project. I was able to successfully build this program using only open source software. As a leader in data collection, I mentored and provided oversight for new data analysts on data collection techniques by providing written feedback reports and informal input on a daily basis.</p>
+                <p>At Catastrophe & National Claims, I was responsible for developing a program to efficiently pull elevation data from lidar point cloud datasets via prescribed coordinates from scratch. The program was designed to systemically process the significant amount of data required while not exceeding the performance capabilities of a standard laptop.</p>
+                <p>This program was also engineered to be easily adapted to another project. I was able to successfully build this program using only open source software. As a leader in data collection, I mentored and provided oversight for new data analysts on data collection techniques by providing written feedback reports and informal input on a daily basis.</p>
             </li>
             <li>
                 <h3>Developed Wavepoolweather.com</h3>
-                <p>I developed a fully-automated dynamic website to forecast wave pool water temperatures at <a href="http://wavepoolweather.com" target="_blank">WavePoolWeather.com</a>. In Waco, TX lies arguably the nation's most renowned wave pool for surfing, Waco Surf. Here there exists a demand to predict the water temperature as knowing the water temperature is important to deciding what type of wetsuit you need (if one at all). This is especially important for the fall and spring as the weather in Texas is extremely erratic during these seasons. To do this, I spun up a virtual Linux machine using an AWS EC2 instance and Apache to host the server. I coded the backend to read national weather service APIs and manage files automatically using Python scripts scheduled by cronjobs. I designed the front end using CSS and HTML. I plan to create forecasts for every public wave pool in the world in the coming weeks.</p>
+                <p>I developed a fully-automated dynamic website to forecast wave pool water temperatures at <a href="http://wavepoolweather.com" target="_blank">WavePoolWeather.com</a>. In Waco, TX lies arguably the nation's most renowned wave pool for surfing, Waco Surf. Here there is a demand to accurately predict the water temperature because knowing the water temperature is important to deciding what type of wetsuit you need (if one at all). This is especially important for the fall and spring as the weather in Texas is extremely erratic during these seasons. To do this, I spun up a virtual Linux machine using an AWS EC2 instance and Apache to host the server. I coded the backend to read national weather service APIs and manage files automatically using python scripts scheduled by cronjobs. I designed the front end using CSS and HTML. I plan to create forecasts for every public wave pool in the world in the coming weeks.</p>
             </li>
         </ul>
     </section>
