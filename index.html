@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dylan Elliott</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            /* background-color: #f4f4f4; */
             background-image: url('nicebackground.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            color: #333;
         }
         header {
-            background-color: rgb(88, 6, 6);
-            color: rgb(238, 238, 238);
+            background-color: rgba(88, 6, 6, 0.8);
+            color: #f4f4f4;
             padding: 1em 0;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
         nav ul {
             list-style-type: none;
@@ -31,43 +34,64 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: white;
+            color: #f4f4f4;
             text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffeb3b; /* Gold color for hover effect */
         }
         section {
             padding: 2em;
             margin: 0 auto;
             max-width: 800px;
+            background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+        section:hover {
+            background: rgba(255, 255, 255, 1); /* Fully opaque on hover */
         }
         .intro {
-            background-color: #fff;
-            padding: 2em;
-            border-radius: 8px;
-            text-align: center;
             display: flex;
             align-items: center;
             gap: 20px;
-        } 
-        .intro img {
-            border-radius: 50%;
-            width: 150px; /* Adjust the size as needed */
-            height: 150px; /* Adjust the size as needed */
-            object-fit: cover;
-        }
-        .projects {
-            background-color: #e0e0e0;
-            padding: 2em;
-            border-radius: 8px;
-        }
-        .contact {
-            background-color: #fff;
-            padding: 2em;
-            border-radius: 8px;
             text-align: center;
         }
+        .intro img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 4px solid #fff; /* Add a border */
+            transition: transform 0.3s ease;
+        }
+        .intro img:hover {
+            transform: scale(1.05); /* Zoom effect */
+        }
+        .projects ul {
+            padding-left: 20px;
+        }
+        .projects li {
+            margin-bottom: 1em;
+            transition: transform 0.3s ease;
+        }
+        .projects li:hover {
+            transform: translateX(10px); /* Slide effect */
+        }
+        .contact a {
+            color: #ffeb3b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact a:hover {
+            color: #f4f4f4;
+        }
         footer {
-            background-color: rgb(88, 6, 6);
-            color: white;
+            background-color: rgba(88, 6, 6, 0.8);
+            color: #f4f4f4;
             padding: 1em 0;
             text-align: center;
         }
@@ -75,7 +99,7 @@
 </head>
 <body>
     <header>
-        <h1>Personal Website: Dylan Elliott</h1>
+        <h1>Dylan Elliott</h1>
         <nav>
             <ul>
                 <li><a href="#intro">Home</a></li>
@@ -87,18 +111,16 @@
     </header>
 
     <section id="intro" class="intro">
-        <img src="tamuprofilepicture.png" alt="Dylan Elliott"> <!-- Add your photo here -->
+        <img src="tamuprofilepicture.png" alt="Dylan Elliott">
         <div>
-        <h2>Hello, I'm Dylan Elliott</h2>
-        <p>Welcome to my personal website. Here you will find more about my background, projects, skills, and how you can get in touch with me.</p>
+            <h2>Hello, I'm Dylan Elliott</h2>
+            <p>Welcome to my personal website. Here you will find more about my background, projects, skills, and how you can get in touch with me.</p>
         </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm Dylan Elliott, a graduate student at Texas A&M University and data analyst at Catastrophe & National Claims based in College Station, Texas. I have a passion for solving geoscience problems through programming and data analysis. With a background in Earth, Ocean, Planetary, and Atmospheric Sciences, I enjoy developing solutions to make our world more efficient and resilient through coding, math, and exceptional problem solving skills. 
-        I am looking for a full-time position to apply my skills in data analysis, numerical modeling, and machine learning to solve complex problems. 
-        </p>
+        <p>Hi! I'm Dylan Elliott, a graduate student at Texas A&M University and data analyst at Catastrophe & National Claims based in College Station, Texas. I have a passion for solving geoscience problems through programming and data analysis. With a background in Earth, Ocean, Planetary, and Atmospheric Sciences, I enjoy developing solutions to make our world more efficient and resilient through coding, math, and exceptional problem solving skills. I am looking for a full-time position to apply my skills in data analysis, numerical modeling, and machine learning to solve complex problems.</p>
     </section>
 
     <section id="projects" class="projects">
@@ -107,26 +129,24 @@
         <ul>
             <li>
                 <h3>Integrated Approach to Augment a NWP Model</h3>
-                <p>In this project, a machine learning (ML) training method called the iterative training technique was tested on a global circulation model. Traditionally, the process of data assimilation and the training of a ML model are kept seperate. However, this technique integrates these two processes together, by training the next iteration of a hybrid model (one that has a ML component and a knowledge-based component) on the last analyses it produced. We found promising results using this technique and the work is still ongoing. 
-                At Texas A&M, I developed skills in high performance computing, data analysis, problem solving strategies, and a deep understanding of numerical weather prediction models, python, and FORTRAN. I am on track to defend my MS thesis in Fall 2024 and have a manuscipt submitted to a top journal of the atmospheric sciences based on the results.</p>
+                <p>In this project, a machine learning (ML) training method called the iterative training technique was tested on a global circulation model. Traditionally, the process of data assimilation and the training of a ML model are kept separate. However, this technique integrates these two processes together, by training the next iteration of a hybrid model (one that has a ML component and a knowledge-based component) on the last analyses it produced. We found promising results using this technique and the work is still ongoing. At Texas A&M, I developed skills in high performance computing, data analysis, problem solving strategies, and a deep understanding of numerical weather prediction models, python, and FORTRAN. I am on track to defend my MS thesis in Fall 2024 and have a manuscript submitted to a top journal of the atmospheric sciences based on the results.</p>
             </li>
             <li>
                 <h3>Independent Data Analyst for CNC</h3>
-                <p>At Catastrophe & National Claims, I was responsible for developing a program to efficiently pull elevation data from lidar point cloud datasets via prescribed coordinates from scratch. The program was designed to systemically process the significant amount of data required while not exceeding the performance capabilities of a standard laptop. This program was also engineered to be easily adapted to another project. I was able to successfully build this program using only open source software. As a leader in data collection, I mentored and provided oversight for new data  analysts on data collection techniques by providing written feedback reports and informal input on a daily basis.</p>
+                <p>At Catastrophe & National Claims, I was responsible for developing a program to efficiently pull elevation data from lidar point cloud datasets via prescribed coordinates from scratch. The program was designed to systemically process the significant amount of data required while not exceeding the performance capabilities of a standard laptop. This program was also engineered to be easily adapted to another project. I was able to successfully build this program using only open source software. As a leader in data collection, I mentored and provided oversight for new data analysts on data collection techniques by providing written feedback reports and informal input on a daily basis.</p>
             </li>
             <li>
                 <h3>Developed Wavepoolweather.com</h3>
-                <p>I developed a fully-automated dynamic website to forecast wave pool water temperatures at <a href="http://wavepoolweather.com" target="_blank">WavePoolWeather.com</a>. I saw a demand for these forecasts here in Waco, TX at arguably the nation's most renowned wave pool for surfing, Waco Surf. Knowing the water temperature is important to deciding what type of wetsuit you need (if one at all). The weather in Texas during fall and spring is extremely erratic.  I created a virtual linux machine using an AWS EC2 instance and Apache to host the server. I coded the backend to read national weather service API's and manage files automatically using python scripts scheduled by cronjobs. I designed the front end using css and html. I plan to create forecasts for every public wave pool in the world in the coming weeks. </p>
-            <!-- Add more projects as needed -->
+                <p>I developed a fully-automated dynamic website to forecast wave pool water temperatures at <a href="http://wavepoolweather.com" target="_blank">WavePoolWeather.com</a>. In Waco, TX lies arguably the nation's most renowned wave pool for surfing, Waco Surf. Here there exists a demand to predict the water temperature as knowing the water temperature is important to deciding what type of wetsuit you need (if one at all). This is especially important for the fall and spring as the weather in Texas is extremely erratic during these seasons. To do this, I spun up a virtual Linux machine using an AWS EC2 instance and Apache to host the server. I coded the backend to read national weather service APIs and manage files automatically using Python scripts scheduled by cronjobs. I designed the front end using CSS and HTML. I plan to create forecasts for every public wave pool in the world in the coming weeks.</p>
+            </li>
         </ul>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <p>If you'd like to get in touch, please reach out to me at:</p>
-        <p>Email: <a href="mailto:your.email@example.com">dylanelliott@tamu.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">https://www.linkedin.com/in/dylan-elliott-a44744176</a></p>
-        <!-- Add more contact options if needed -->
+        <p>Email: <a href="mailto:dylanelliott@tamu.edu">dylanelliott@tamu.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/dylan-elliott-a44744176" target="_blank">linkedin.com/in/dylan-elliott-a44744176</a></p>
     </section>
 
     <footer>
