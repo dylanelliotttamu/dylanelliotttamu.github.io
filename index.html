@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Dylan Elliott</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,6 +40,15 @@
             padding: 2em;
             border-radius: 8px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .intro img {
+            border-radius: 50%;
+            width: 150px; /* Adjust the size as needed */
+            height: 150px; /* Adjust the size as needed */
+            object-fit: cover;
         }
         .projects {
             background-color: #e0e0e0;
@@ -62,7 +71,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Personal Website</h1>
+        <h1>Dylan Elliott</h1>
         <nav>
             <ul>
                 <li><a href="#intro">Home</a></li>
@@ -74,22 +83,26 @@
     </header>
 
     <section id="intro" class="intro">
-        <h2>Hello, I'm [Your Name]</h2>
-        <p>Welcome to my personal website. I'm excited to share more about myself, my projects, and how you can get in touch with me.</p>
+        <img src="your-photo.jpg" alt="Dylan Elliott"> <!-- Add your photo here -->
+        <div>
+        <h2>Hello, I'm Dylan Elliott</h2>
+        <p>Welcome to my personal website. Here you will find more about my background, projects, skills, and how you can get in touch with me.</p>
+        </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm [Your Name], a [Your Profession] based in [Your Location]. I have a passion for [Your Interests or Skills]. With a background in [Your Field], I enjoy [Brief Description of Your Work or Activities].</p>
+        <p>Hi! I'm Dylan Elliott, a graduate student and data analyst based in College Station, Texas. I have a passion for solving geoscience problems through programming and data analysis. With a background in Earth, Ocean, Planetary, and Atmospheric Sciences, I enjoy developing solutions to make our world more efficient and resilient through coding, math, and exceptional problem solving skills.</p>
     </section>
 
     <section id="projects" class="projects">
         <h2>My Projects</h2>
-        <p>Here are some of the projects I've worked on:</p>
+        <p>Here are some recent projects I've worked on:</p>
         <ul>
             <li>
-                <h3>Project 1</h3>
-                <p>Description of Project 1. You can include details about what it is, what technologies were used, and any notable accomplishments.</p>
+                <h3>Integrated Approach to Augment a NWP Model</h3>
+                <p>In this project, a machine learning (ML) training method called the iterative training technique was tested on a global circulation model. Traditionally, the process of data assimilation and the training of a ML model are kept seperate. However, this technique integrates these two processes together, by training the next iteration of a hybrid model (one that has a ML component and a knowledge-based component) on the last analyses it produced. We found promising results using this technique and the work is still ongoing. 
+                At Texas A&M, I developed skills in high performance computing, data analysis, problem solving strategies, and a deep understanding of numerical weather prediction models, python, and FORTRAN. I am on track to defend my MS thesis in Fall 2024 and have a manuscipt submitted to a top journal of the atmospheric sciences based on the results.</p>
             </li>
             <li>
                 <h3>Project 2</h3>
@@ -108,7 +121,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2024 Dylan Elliott. All rights reserved.</p>
     </footer>
 </body>
 </html>
