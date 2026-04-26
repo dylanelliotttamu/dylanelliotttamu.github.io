@@ -2,8 +2,6 @@
    main.css — base layout, header, footer, section cards
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap');
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -37,6 +35,14 @@ header h1 {
   margin: 0 0 0.4em;
   font-size: 1.6rem;
   letter-spacing: 0.05em;
+}
+
+.headline-subtitle {
+  margin: 0 0 0.9em;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(244, 244, 244, 0.86);
 }
 
 /* ---- Main content area ---- */
@@ -105,6 +111,18 @@ main {
   padding: 0;
 }
 
+/* ---- Skills ---- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6em;
+}
+
+.skills-grid p {
+  margin: 0;
+  line-height: 1.6;
+}
+
 /* ---- Contact ---- */
 .contact-links p {
   margin: 0.5em 0;
@@ -112,7 +130,8 @@ main {
 
 .contact-links a {
   color: #1b3d9b;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
   transition: color 0.2s ease;
 }
 
@@ -134,8 +153,21 @@ footer {
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
 }
 
+.timeline-legend {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.timeline-legend-education-dot {
+  color: #1b3d9b;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 600px) {
+  .headline-subtitle {
+    font-size: 0.75rem;
+  }
+
   .intro-wrap {
     flex-direction: column;
     text-align: center;

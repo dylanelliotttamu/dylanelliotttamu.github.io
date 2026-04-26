@@ -41,6 +41,12 @@
   border-bottom-color: #ffeb3b;
 }
 
+.tab-nav button:focus,
+.tab-nav button:focus-visible {
+  outline: 2px solid #ffeb3b;
+  outline-offset: -2px;
+}
+
 /* ---- Responsive: stack or scroll on small screens ---- */
 @media (max-width: 480px) {
   .tab-nav {

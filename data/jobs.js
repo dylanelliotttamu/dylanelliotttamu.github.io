@@ -9,10 +9,10 @@ const jobs = [
     type: "job",
     head: true,
     bullets: [
-      "Drone-based methane emissions monitoring, detection, and quantification",
-      "Analyze and interpret environmental sensor data from UAV flight missions",
-      "Develop data pipelines and analysis tools to support emissions reporting",
-      "Collaborate with engineering and science teams to improve detection algorithms"
+      "Support drone-based methane monitoring workflows from raw sensor capture to quantification outputs",
+      "Build and maintain analysis pipelines that improve reliability and repeatability of emissions reporting",
+      "Interpret high-volume environmental flight data and translate findings into decision-ready summaries",
+      "Collaborate across engineering and science teams to refine detection logic and data quality standards"
     ]
   },
   {
@@ -25,10 +25,10 @@ const jobs = [
     type: "education",
     head: false,
     bullets: [
-      "Tested iterative ML/data assimilation technique on a low-resolution AGCM",
-      "Implemented reservoir computing (echo state network) hybrid forecast model",
-      "Developed skills in HPC, numerical weather prediction, Python, and FORTRAN",
-      "Submitted manuscript to top atmospheric sciences journal; defended MS thesis Fall 2024"
+      "Researched iterative ML plus data assimilation methods on a low-resolution AGCM",
+      "Implemented hybrid reservoir-computing forecast workflows for atmospheric prediction experiments",
+      "Developed reproducible HPC pipelines for numerical weather prediction analysis in Python and FORTRAN",
+      "Completed and defended MS thesis (Fall 2024) and prepared manuscript for peer-reviewed submission"
     ]
   },
   {
@@ -41,10 +41,10 @@ const jobs = [
     type: "job",
     head: false,
     bullets: [
-      "Built LiDAR point cloud elevation extraction tool from scratch using open-source software",
-      "Engineered pipeline to process large datasets within standard laptop performance limits",
-      "Mentored new analysts on data collection techniques with written feedback and daily guidance",
-      "Designed tool to be reusable and adaptable for future project needs"
+      "Built a LiDAR elevation extraction tool from scratch using an open-source Python stack",
+      "Engineered processing workflows for large point-cloud datasets within standard laptop constraints",
+      "Designed reusable pipeline components to speed onboarding for new projects and analysts",
+      "Mentored incoming analysts through daily QA feedback and reproducible data collection practices"
     ]
   },
   {
@@ -57,9 +57,9 @@ const jobs = [
     type: "education",
     head: false,
     bullets: [
-      "Studied Earth, Ocean, Planetary, and Atmospheric sciences",
-      "Developed foundation in geoscience data analysis and scientific computing",
-      "Built early programming skills in Python and data visualization"
+      "Studied Earth, Ocean, Planetary, and Atmospheric sciences with quantitative coursework",
+      "Built foundation in geoscience data analysis, scientific computing, and research communication",
+      "Developed early programming experience in Python, data visualization, and numerical methods"
     ]
   }
 ];

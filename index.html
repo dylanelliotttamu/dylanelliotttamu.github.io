@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dylan Elliott</title>
+  <title>Dylan Elliott | Data Science &amp; Engineering</title>
+  <meta name="description" content="Dylan Elliott is a data science and engineering professional focused on environmental analytics, machine learning, and production pipelines.">
+  <link rel="canonical" href="https://dylanelliotttamu.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dylanelliotttamu.github.io/">
+  <meta property="og:title" content="Dylan Elliott | Data Science &amp; Engineering">
+  <meta property="og:description" content="Portfolio highlighting production analytics, ML research, and geoscience data engineering projects.">
+  <meta property="og:image" content="https://dylanelliotttamu.github.io/tamuprofilepicture.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dylan Elliott | Data Science &amp; Engineering">
+  <meta name="twitter:description" content="Portfolio highlighting production analytics, ML research, and geoscience data engineering projects.">
+  <meta name="twitter:image" content="https://dylanelliotttamu.github.io/tamuprofilepicture.png">
 
   <!-- Favicon / app icons (unchanged) -->
   <link rel="apple-touch-icon" sizes="57x57"  href="/apple-icon-57x57.png">
@@ -42,19 +55,20 @@
   ======================================================= -->
   <header>
     <h1>D. Elliott</h1>
+    <p class="headline-subtitle">Data Science &amp; Engineering</p>
     <nav aria-label="Main navigation">
       <ul class="tab-nav" role="tablist">
         <li role="presentation">
-          <button role="tab" data-tab="tab-home"       aria-controls="tab-home">Home</button>
+          <button id="tab-btn-home" type="button" role="tab" data-tab="tab-home" aria-controls="tab-home" aria-selected="false">Home</button>
         </li>
         <li role="presentation">
-          <button role="tab" data-tab="tab-experience" aria-controls="tab-experience">Experience</button>
+          <button id="tab-btn-experience" type="button" role="tab" data-tab="tab-experience" aria-controls="tab-experience" aria-selected="false">Experience</button>
         </li>
         <li role="presentation">
-          <button role="tab" data-tab="tab-projects"   aria-controls="tab-projects">Projects</button>
+          <button id="tab-btn-projects" type="button" role="tab" data-tab="tab-projects" aria-controls="tab-projects" aria-selected="false">Projects</button>
         </li>
         <li role="presentation">
-          <button role="tab" data-tab="tab-contact"    aria-controls="tab-contact">Contact</button>
+          <button id="tab-btn-contact" type="button" role="tab" data-tab="tab-contact" aria-controls="tab-contact" aria-selected="false">Contact</button>
         </li>
       </ul>
     </nav>
@@ -63,41 +77,52 @@
   <!-- ======================================================
        MAIN CONTENT — tab panels
   ======================================================= -->
-  <main>
+  <main id="main-content">
 
     <!-- ---- HOME ---- -->
-    <div id="tab-home" class="tab-panel" role="tabpanel" aria-labelledby="tab-home">
+    <div id="tab-home" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-home">
       <div class="card">
         <div class="intro-wrap">
-          <img src="tamuprofilepicture.png" alt="Dylan Elliott profile photo">
+          <img src="tamuprofilepicture.png" alt="Dylan Elliott profile photo" loading="lazy">
           <div class="intro-text">
-            <h2>Hello, my name is Dylan Elliott</h2>
-            <p>Welcome to my personal site. Here you will find information about my background,
-               projects, skills, and how you can get in touch with me. Thank you for visiting!</p>
+            <h2>Building practical data and ML solutions for real-world systems</h2>
+            <p>I design analytics workflows, machine learning experiments, and production-minded
+               data pipelines for environmental and geospatial problems. My focus is turning noisy,
+               high-volume data into decision-ready outputs.</p>
           </div>
         </div>
       </div>
 
       <div class="card">
         <h2>About Me</h2>
-        <p>I'm currently a Data Analyst at SeekOps in Austin, TX where I focus on drone-based
-           methane emissions monitoring, detection, and quantification. I was formerly a MS
-           graduate research student at Texas A&amp;M and Data Analyst at CNC Catastrophe &amp;
-           National Claims.</p>
-        <p>I have a passion for solving geoscience problems through programming and data analysis.
-           With an extensive background in Earth, Ocean, Planetary, and Atmospheric sciences,
-           I enjoy developing solutions to make our world more efficient and resilient through
-           coding, math, and creative problem solving.</p>
+          <p>I'm a data professional with a geoscience background, currently working at SeekOps in
+            Austin, TX on methane detection and quantification workflows using UAV sensor data.
+            My experience spans production analytics, research computing, and applied machine
+            learning in atmospheric and geospatial domains.</p>
+          <p>At Texas A&amp;M, I completed an MS focused on hybrid ML and data assimilation methods.
+            Across industry and research roles, I enjoy building reliable systems that connect data
+            engineering foundations with clear scientific and business outcomes.</p>
+        </div>
+
+        <div class="card">
+          <h2>Core Skills</h2>
+          <div class="skills-grid">
+           <p><strong>Languages:</strong> Python, SQL, FORTRAN, JavaScript</p>
+           <p><strong>Data &amp; ML:</strong> pandas, NumPy, Matplotlib, reservoir computing, model evaluation</p>
+           <p><strong>Data Engineering:</strong> ETL workflows, batch processing, reproducible analytics pipelines</p>
+           <p><strong>Cloud &amp; Systems:</strong> AWS EC2, Linux, cron automation, HPC environments</p>
+           <p><strong>Domain Tools:</strong> LiDAR processing, atmospheric data analysis, environmental sensor data</p>
+          </div>
       </div>
     </div>
 
     <!-- ---- EXPERIENCE ---- -->
-    <div id="tab-experience" class="tab-panel" role="tabpanel" aria-labelledby="tab-experience">
+    <div id="tab-experience" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-experience">
       <div class="card">
         <h2>Experience &amp; Education</h2>
         <p>Click any entry to expand details.
-           <span class="mono" style="font-size:0.8rem; color:#777;">
-             ● job &nbsp;|&nbsp; <span style="color:#1b3d9b;">●</span> education
+           <span class="mono timeline-legend">
+             ● job &nbsp;|&nbsp; <span class="timeline-legend-education-dot">●</span> education
            </span>
         </p>
         <!-- Timeline rendered by scripts/timeline.js -->
@@ -106,7 +131,7 @@
     </div>
 
     <!-- ---- PROJECTS ---- -->
-    <div id="tab-projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects">
+    <div id="tab-projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-projects">
       <div class="card">
         <h2>Projects</h2>
         <p>Click a folder to expand project details and file breakdown.</p>
@@ -116,10 +141,11 @@
     </div>
 
     <!-- ---- CONTACT ---- -->
-    <div id="tab-contact" class="tab-panel" role="tabpanel" aria-labelledby="tab-contact">
+    <div id="tab-contact" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-contact">
       <div class="card">
         <h2>Contact Me</h2>
         <p>If you'd like to get in touch, please reach out:</p>
+        <p><strong>Resume:</strong> Available by request via email.</p>
         <div class="contact-links">
           <p>📧 Email:
             <a href="mailto:dylanelliott@tamu.edu">dylanelliott@tamu.edu</a>
