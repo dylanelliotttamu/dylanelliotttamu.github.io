@@ -1,0 +1,200 @@
+/* ============================================================
+   tree.css — GitHub-style expandable file tree
+   ============================================================ */
+
+.tree-container {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+/* Root label */
+.tree-root-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tree-root-label .tree-icon {
+  font-size: 1.1rem;
+}
+
+/* Tree list reset */
+.tree-list,
+.tree-children {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each node row */
+.tree-node {
+  position: relative;
+}
+
+/* ---- Connector lines ---- */
+/* Vertical line running down the left side of a group */
+.tree-children {
+  padding-left: 1.4em;
+  border-left: 1px solid #ccc;
+  margin-left: 0.55em;
+}
+
+/* Horizontal tick toward each item */
+.tree-node-row::before {
+  content: '';
+  position: absolute;
+  left: -1.4em;
+  top: 50%;
+  width: 0.9em;
+  height: 1px;
+  background: #ccc;
+}
+
+/* ---- Node row ---- */
+.tree-node-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 4px 6px 4px 2px;
+  border-radius: 4px;
+  cursor: default;
+  position: relative;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+
+.tree-node-row:hover {
+  background: rgba(88, 6, 6, 0.05);
+}
+
+.tree-node-row.is-folder {
+  cursor: pointer;
+}
+
+/* ---- Chevron ---- */
+.tree-chevron {
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  color: #777;
+  font-style: normal;
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.tree-node.open > .tree-node-row .tree-chevron {
+  transform: rotate(90deg);
+}
+
+/* ---- Icon ---- */
+.tree-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ---- Name + meta ---- */
+.tree-name {
+  color: #1b3d9b;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.tree-node-row.is-file .tree-name {
+  color: #333;
+  font-weight: 400;
+}
+
+.tree-meta {
+  color: #777;
+  font-size: 0.8rem;
+  margin-left: auto;
+  padding-left: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+/* ---- Commit date badge ---- */
+.tree-date {
+  color: #999;
+  font-size: 0.78rem;
+  margin-left: 0.5em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---- Collapsible children ---- */
+.tree-children {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.tree-node.open > .tree-children {
+  max-height: 600px;
+}
+
+/* ---- Detail panel (README body) ---- */
+.tree-detail {
+  display: none;
+  background: #f9f6f6;
+  border: 1px solid #e8dede;
+  border-radius: 6px;
+  padding: 1em 1.2em;
+  margin: 0.5em 0 0.5em 1.8em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.tree-detail.open {
+  display: block;
+}
+
+.tree-detail .detail-link {
+  display: inline-block;
+  margin-top: 0.6em;
+  color: #1b3d9b;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.tree-detail .detail-link:hover {
+  text-decoration: underline;
+}
+
+.tree-detail .detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.6em;
+}
+
+.tree-detail .tag {
+  background: #f0e8e8;
+  color: #580606;
+  border-radius: 3px;
+  padding: 2px 7px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .tree-meta {
+    display: none;
+  }
+  .tree-date {
+    display: none;
+  }
+}

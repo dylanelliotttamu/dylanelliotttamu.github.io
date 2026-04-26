@@ -1,0 +1,212 @@
+/* ============================================================
+   timeline.css — git commit graph timeline
+   ============================================================ */
+
+.timeline {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  position: relative;
+  padding: 0.5em 0 0.5em 2.4em;
+  border-left: 2px solid #c8a8a8;
+  margin-left: 0.8em;
+}
+
+/* ---- Branch HEAD label ---- */
+.branch-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #580606;
+  color: #fff;
+  font-size: 0.78rem;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 1.2em;
+  margin-left: -2.4em;
+  letter-spacing: 0.03em;
+}
+
+.branch-head::before {
+  content: '⎇';
+  font-size: 0.9rem;
+}
+
+/* ---- Individual commit node ---- */
+.commit {
+  position: relative;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* Circle dot on the timeline line */
+.commit-dot {
+  position: absolute;
+  left: -2.95em;
+  top: 0.85em;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #580606;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #c8a8a8;
+  z-index: 1;
+  transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.commit:hover .commit-dot {
+  box-shadow: 0 0 0 3px #580606;
+  background: #8b0000;
+}
+
+.commit-dot.education {
+  background: #1b3d9b;
+  box-shadow: 0 0 0 2px #a8b8d8;
+}
+
+.commit:hover .commit-dot.education {
+  box-shadow: 0 0 0 3px #1b3d9b;
+}
+
+/* ---- Commit header row ---- */
+.commit-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  padding: 0.7em 0.8em 0.7em 0;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.commit:hover .commit-header {
+  background: rgba(88, 6, 6, 0.05);
+}
+
+.commit-dot.education ~ .commit-header:hover,
+.commit:hover .commit-dot.education ~ .commit-header {
+  background: rgba(27, 61, 155, 0.05);
+}
+
+.commit-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.commit-title .commit-role {
+  color: #580606;
+}
+
+.commit-title .commit-role.education {
+  color: #1b3d9b;
+}
+
+.commit-title .commit-company {
+  color: #555;
+  font-weight: 400;
+}
+
+/* ---- Date tag badge ---- */
+.commit-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #f5f0f0;
+  border: 1px solid #ddd;
+  color: #666;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.commit-tag::before {
+  content: '🏷';
+  font-size: 0.7rem;
+}
+
+/* ---- Location ---- */
+.commit-location {
+  color: #999;
+  font-size: 0.78rem;
+  margin-left: 0.3em;
+}
+
+/* ---- Chevron indicator ---- */
+.commit-chevron {
+  margin-left: auto;
+  color: #aaa;
+  font-size: 0.75rem;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.commit.open .commit-chevron {
+  transform: rotate(90deg);
+}
+
+/* ---- Expand/collapse body ---- */
+.commit-body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  padding-left: 0.2em;
+}
+
+.commit.open .commit-body {
+  max-height: 400px;
+}
+
+.commit-bullets {
+  list-style: none;
+  padding: 0.4em 0 0.8em 0.4em;
+  margin: 0;
+  border-left: 2px solid #e0d0d0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.88rem;
+  color: #444;
+}
+
+.commit-bullets li {
+  padding: 0.25em 0 0.25em 0.8em;
+  position: relative;
+  line-height: 1.5;
+}
+
+.commit-bullets li::before {
+  content: '+';
+  position: absolute;
+  left: -0.1em;
+  color: #580606;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+.commit-bullets.education li::before {
+  color: #1b3d9b;
+}
+
+/* Connector line between commits */
+.commit + .commit {
+  margin-top: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 1.8em;
+    margin-left: 0.5em;
+  }
+  .commit-dot {
+    left: -2.35em;
+  }
+  .commit-tag {
+    font-size: 0.7rem;
+    padding: 1px 6px;
+  }
+  .commit-title {
+    font-size: 0.85rem;
+  }
+}

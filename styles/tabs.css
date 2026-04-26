@@ -1,0 +1,57 @@
+/* ============================================================
+   tabs.css — tab navigation bar
+   ============================================================ */
+
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 0.5em;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.tab-nav li {
+  margin: 0;
+}
+
+.tab-nav button {
+  background: none;
+  border: none;
+  color: rgba(244, 244, 244, 0.75);
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.7em 1.4em;
+  cursor: pointer;
+  position: relative;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-nav button:hover {
+  color: #ffeb3b;
+  border-bottom-color: rgba(255, 235, 59, 0.5);
+}
+
+.tab-nav button.active {
+  color: #fff;
+  border-bottom-color: #ffeb3b;
+}
+
+/* ---- Responsive: stack or scroll on small screens ---- */
+@media (max-width: 480px) {
+  .tab-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding-bottom: 2px;
+  }
+  .tab-nav button {
+    font-size: 0.85rem;
+    padding: 0.6em 1em;
+    white-space: nowrap;
+  }
+}

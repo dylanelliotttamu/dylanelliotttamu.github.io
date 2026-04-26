@@ -1,0 +1,149 @@
+/* ============================================================
+   main.css — base layout, header, footer, section cards
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../nicebackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ---- Header ---- */
+header {
+  background-color: rgba(88, 6, 6, 0.92);
+  color: #f4f4f4;
+  padding: 1em 0 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+header h1 {
+  margin: 0 0 0.4em;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Main content area ---- */
+main {
+  padding: 2em 1em 4em;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ---- Section cards ---- */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 2em;
+  margin-bottom: 2em;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #580606;
+  border-bottom: 2px solid #f0e0e0;
+  padding-bottom: 0.4em;
+}
+
+/* ---- Intro / Home ---- */
+.intro-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.intro-wrap img {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.intro-wrap img:hover {
+  transform: scale(1.05);
+}
+
+.intro-text h2 {
+  margin-top: 0;
+  border: none;
+  padding: 0;
+}
+
+/* ---- Contact ---- */
+.contact-links p {
+  margin: 0.5em 0;
+}
+
+.contact-links a {
+  color: #1b3d9b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: #580606;
+}
+
+/* ---- Footer ---- */
+footer {
+  background-color: rgba(88, 6, 6, 0.88);
+  color: #f4f4f4;
+  padding: 1em 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ---- Monospace utility ---- */
+.mono {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .intro-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+  main {
+    padding: 1em 0.5em 3em;
+  }
+  .card {
+    padding: 1.2em;
+  }
+}

@@ -1,183 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dylan Elliott</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('nicebackground.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: #333;
-        }
-        header {
-            background-color: rgba(88, 6, 6, 0.8);
-            color: #f4f4f4;
-            padding: 1em 0;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #f4f4f4;
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #ffeb3b; /* Gold color for hover effect */
-        }
-        section {
-            padding: 2em;
-            margin: 0 auto;
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.9); /* Slight transparency */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s ease;
-            margin-bottom: 2em; /* Space between sections */
-        }
-        section:hover {
-            background: rgba(255, 255, 255, 1); /* Fully opaque on hover */
-        }
-        .intro {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            text-align: center;
-        }
-        .intro img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 4px solid #fff; /* Add a border */
-            transition: transform 0.3s ease;
-        }
-        .intro img:hover {
-            transform: scale(1.05); /* Zoom effect */
-        }
-        .projects ul {
-            padding-left: 20px;
-        }
-        .projects li {
-            margin-bottom: 1em;
-            transition: transform 0.3s ease;
-        }
-        .projects li:hover {
-            transform: translateX(10px); /* Slide effect */
-        }
-        .contact a {
-            color: #1b3d9b;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .contact a:hover {
-            color: #f4f4f4;
-        }
-        footer {
-            background-color: rgba(88, 6, 6, 0.8);
-            color: #f4f4f4;
-            padding: 1em 0;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dylan Elliott</title>
+
+  <!-- Favicon / app icons (unchanged) -->
+  <link rel="apple-touch-icon" sizes="57x57"  href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60"  href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72"  href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76"  href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96"   href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16"   href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Fonts: Roboto + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Roboto:wght@400;700&display=swap">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/tabs.css">
+  <link rel="stylesheet" href="styles/tree.css">
+  <link rel="stylesheet" href="styles/timeline.css">
 </head>
 <body>
-    <header>
-        <h1>D. Elliott</h1>
-        <nav>
-            <ul>
-                <li><a href="#intro">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="intro" class="intro">
-        <img src="tamuprofilepicture.png" alt="Dylan Elliott">
-        <div>
+  <!-- ======================================================
+       HEADER + TAB NAVIGATION
+  ======================================================= -->
+  <header>
+    <h1>D. Elliott</h1>
+    <nav aria-label="Main navigation">
+      <ul class="tab-nav" role="tablist">
+        <li role="presentation">
+          <button role="tab" data-tab="tab-home"       aria-controls="tab-home">Home</button>
+        </li>
+        <li role="presentation">
+          <button role="tab" data-tab="tab-experience" aria-controls="tab-experience">Experience</button>
+        </li>
+        <li role="presentation">
+          <button role="tab" data-tab="tab-projects"   aria-controls="tab-projects">Projects</button>
+        </li>
+        <li role="presentation">
+          <button role="tab" data-tab="tab-contact"    aria-controls="tab-contact">Contact</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======================================================
+       MAIN CONTENT — tab panels
+  ======================================================= -->
+  <main>
+
+    <!-- ---- HOME ---- -->
+    <div id="tab-home" class="tab-panel" role="tabpanel" aria-labelledby="tab-home">
+      <div class="card">
+        <div class="intro-wrap">
+          <img src="tamuprofilepicture.png" alt="Dylan Elliott profile photo">
+          <div class="intro-text">
             <h2>Hello, my name is Dylan Elliott</h2>
-            <p>Welcome to my personal site. Here you will find information about my background, projects, skills, and how you can get in touch with me. Thank you for visiting!</p>
+            <p>Welcome to my personal site. Here you will find information about my background,
+               projects, skills, and how you can get in touch with me. Thank you for visiting!</p>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section id="about">
+      <div class="card">
         <h2>About Me</h2>
-        <p>I'm currently a Data Analyst at SeekOps in Austin, TX where I focus on drone-based methane emissions monitoring, detection, and quantification. I was formerly a MS graduate research student at Texas A&M and Data Analyst at CNC Catastrophe & National Claims.</p> 
-        <p>I have a passion for solving geoscience problems through programming and data analysis. With a extensive background in Earth, Ocean, Planetary, and Atmospheric sciences, I enjoy developing solutions to make our world more efficient and resilient through coding, math, and creative problem solving.</p>
-    </section>
+        <p>I'm currently a Data Analyst at SeekOps in Austin, TX where I focus on drone-based
+           methane emissions monitoring, detection, and quantification. I was formerly a MS
+           graduate research student at Texas A&amp;M and Data Analyst at CNC Catastrophe &amp;
+           National Claims.</p>
+        <p>I have a passion for solving geoscience problems through programming and data analysis.
+           With an extensive background in Earth, Ocean, Planetary, and Atmospheric sciences,
+           I enjoy developing solutions to make our world more efficient and resilient through
+           coding, math, and creative problem solving.</p>
+      </div>
+    </div>
 
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <p>Here are some recent projects I've worked on:</p>
-        <ul>
-            <li>
-                <h3>Integrated Data Assimilation and Machine Learning on a Low-Resolution AGCM</h3>
-                <p>I tested a machine learning (ML) training technique called the iterative method on a global circulation model using a recurrent neural network framework called reservoir computing. Traditionally, the process of data assimilation and the training of a ML model are kept separate, however, this technique integrates these two processes together, by training the next iteration of a hybrid model (one that has a ML component and a knowledge-based component) on the last previous time series the hybrid model it produced. We found promising results using this technique and the work is still ongoing. At Texas A&M, I developed skills in high performance computing, data analysis, problem solving strategies, and a deep understanding of numerical weather prediction models, Python, and FORTRAN. I am on track to defend my MS thesis in Fall 2024 and have a manuscript submitted to a top journal of the atmospheric sciences based on the results.</p>
-            </li>
-            <li>
-                <h3>Data Analyst at CNC Catastrophe and National Claims</h3>
-                <p>I was responsible for developing a program to efficiently pull elevation data from lidar point cloud datasets via prescribed coordinates from scratch. The program was designed to systemically process a significant amount of data required while not exceeding the performance capabilities of a standard laptop.</p>
-                <p>This program was engineered to be easily adapted to another project. I was able to successfully build this program using only open source software. As a leader in data collection, I mentored and provided oversight for new data analysts on data collection techniques by providing written feedback reports and informal input on a daily basis.</p>
-            </li>
-            <li>
-                <h3>Developed WavePoolWeather.com</h3>
-                <p>I developed a fully-automated dynamic website to forecast wave pool water temperatures at <a href="http://www.wavepoolweather.com" target="_blank">WavePoolWeather.com</a>. Accurately quantifying the water temperature is important to deciding what type of equipment you will need to wear to stay comfortable. If your wetsuit is too thick (thin), you will get too hot (cold). This is especially important for the fall and spring seasons because the air temperature affects the water temperature of inland surfing pools rapidly.</p> 
-                <p>To do this, I spun up a virtual Linux machine using an AWS EC2 instance and Apache to host the server. I coded the backend to read national weather service APIs and manage/execute files automatically using Python scripts scheduled by cronjobs. I designed the front end using CSS and HTML. I plan to keep expanding this site's functionalities so your feedback on forecast accuracy would be helpful!</p>
-            </li>
-        </ul>
-    </section>
+    <!-- ---- EXPERIENCE ---- -->
+    <div id="tab-experience" class="tab-panel" role="tabpanel" aria-labelledby="tab-experience">
+      <div class="card">
+        <h2>Experience &amp; Education</h2>
+        <p>Click any entry to expand details.
+           <span class="mono" style="font-size:0.8rem; color:#777;">
+             ● job &nbsp;|&nbsp; <span style="color:#1b3d9b;">●</span> education
+           </span>
+        </p>
+        <!-- Timeline rendered by scripts/timeline.js -->
+        <div id="timeline-mount"></div>
+      </div>
+    </div>
 
-    <section id="contact" class="contact">
+    <!-- ---- PROJECTS ---- -->
+    <div id="tab-projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects">
+      <div class="card">
+        <h2>Projects</h2>
+        <p>Click a folder to expand project details and file breakdown.</p>
+        <!-- Tree rendered by scripts/tree.js -->
+        <div id="tree-mount"></div>
+      </div>
+    </div>
+
+    <!-- ---- CONTACT ---- -->
+    <div id="tab-contact" class="tab-panel" role="tabpanel" aria-labelledby="tab-contact">
+      <div class="card">
         <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, please reach out to me at:</p>
-        <p>Email: <a href="mailto:dylanelliott@tamu.edu">dylanelliott@tamu.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/dylan-elliott-a44744176" target="_blank">linkedin.com/in/dylan-elliott-a44744176</a></p>
-        <p>GitHub: <a href="https://github.com/dylanelliotttamu" target="_blank">github.com/dylanelliotttamu</a></p>
-    </section>
+        <p>If you'd like to get in touch, please reach out:</p>
+        <div class="contact-links">
+          <p>📧 Email:
+            <a href="mailto:dylanelliott@tamu.edu">dylanelliott@tamu.edu</a>
+          </p>
+          <p>💼 LinkedIn:
+            <a href="https://www.linkedin.com/in/dylan-elliott-a44744176"
+               target="_blank" rel="noopener">
+              linkedin.com/in/dylan-elliott-a44744176
+            </a>
+          </p>
+          <p>🐙 GitHub:
+            <a href="https://github.com/dylanelliotttamu"
+               target="_blank" rel="noopener">
+              github.com/dylanelliotttamu
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Dylan Elliott. All rights reserved.</p>
-    </footer>
+  </main>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+  <footer>
+    <p>&copy; <span id="year"></span> Dylan Elliott. All rights reserved.</p>
+  </footer>
+
+  <!-- Data -->
+  <script src="data/projects.js"></script>
+  <script src="data/jobs.js"></script>
+
+  <!-- Scripts -->
+  <script src="scripts/tabs.js"></script>
+  <script src="scripts/tree.js"></script>
+  <script src="scripts/timeline.js"></script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
