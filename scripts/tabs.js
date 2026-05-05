@@ -54,6 +54,15 @@
       });
     });
 
+    // Bind bottom panel navigation buttons
+    const panelNavBtns = document.querySelectorAll('.panel-nav-btn');
+    panelNavBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        activateTab(btn.dataset.tab);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
     // Restore from session or default to first tab
     let initial = null;
     try { initial = sessionStorage.getItem('activeTab'); } catch (e) {}
