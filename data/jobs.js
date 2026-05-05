@@ -48,10 +48,10 @@ const jobs = [
     ]
   },
   {
-    id: "tamu-undergrad",
-    company: "Texas A&M University",
+    id: "ucsc-undergrad",
+    company: "University of California, Santa Cruz",
     role: "BS — Earth, Ocean & Atmospheric Sciences",
-    location: "College Station, TX",
+    location: "Santa Cruz, CA",
     start: "2018-08",
     end: "2022-05",
     type: "education",
