@@ -139,6 +139,49 @@ main {
   color: #580606;
 }
 
+/* ---- Panel bottom navigation ---- */
+.panel-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+.panel-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background-color: #580606;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6em 1.4em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  text-decoration: none;
+}
+
+.panel-nav-btn:hover {
+  background-color: #7a0a0a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.24);
+}
+
+.panel-nav-btn:focus,
+.panel-nav-btn:focus-visible {
+  outline: 2px solid #ffeb3b;
+  outline-offset: 2px;
+}
+
+.panel-nav-btn--next {
+  margin-left: auto;
+}
+
 /* ---- Footer ---- */
 footer {
   background-color: rgba(88, 6, 6, 0.88);
