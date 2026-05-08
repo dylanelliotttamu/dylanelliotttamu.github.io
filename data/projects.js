@@ -30,14 +30,16 @@ const projects = [
   {
     id: "wavepoolweather",
     name: "WavePoolWeather.com",
-    description: "Built and deployed an automated forecasting website for inland wave-pool water temperature guidance. Designed backend jobs that ingest National Weather Service data, run scheduled processing tasks on AWS EC2, and publish updated forecasts through Apache. Outcome: continuously available public forecast tool with end-to-end automation.",
-    tech: ["Python", "AWS EC2", "Apache", "HTML", "CSS", "NWS API", "cron"],
+    description: "Automated forecasting site for inland wave-pool water temperature guidance. Hourly NWS data feeds a physics-based thermal model (solar radiation, evaporative cooling, ambient heat exchange) to estimate pool surface temperature; Apache on AWS EC2 serves the output. A GitHub Actions CI/CD pipeline runs tests on every push and auto-deploys to the server on merge to main. Outcome: zero-touch public forecast tool with full automation from data ingest to live deployment.",
+    tech: ["Python", "AWS EC2", "Apache", "HTML", "CSS", "NWS API", "cron", "GitHub Actions", "CI/CD"],
     status: "Live",
     date: "2023-03",
     link: "http://www.wavepoolweather.com",
     files: [
       { name: "README.md", desc: "Wave pool water temperature forecast site" },
-      { name: "tech_stack.txt", desc: "Python · AWS EC2 · Apache · NWS API · cron" },
+      { name: "thermal_model.py", desc: "Physics-based pool temperature model — solar radiation, evaporative cooling, ambient heat exchange" },
+      { name: ".github/workflows/deploy.yml", desc: "CI/CD pipeline — automated tests on push, auto-deploy to EC2 on merge to main" },
+      { name: "tech_stack.txt", desc: "Python · AWS EC2 · Apache · NWS API · cron · GitHub Actions" },
       { name: "status.txt", desc: "Live — wavepoolweather.com" }
     ]
   }
