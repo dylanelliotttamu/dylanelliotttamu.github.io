@@ -52,8 +52,8 @@ const jobs = [
     company: "University of California, Santa Cruz",
     role: "BS — Earth, Ocean & Atmospheric Sciences",
     location: "Santa Cruz, CA",
-    start: "2018-08",
-    end: "2022-05",
+    start: "2017-09",
+    end: "2021-06",
     type: "education",
     head: false,
     bullets: [
