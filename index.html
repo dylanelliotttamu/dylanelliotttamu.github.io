@@ -68,6 +68,9 @@
           <button id="tab-btn-projects" type="button" role="tab" data-tab="tab-projects" aria-controls="tab-projects" aria-selected="false">Projects</button>
         </li>
         <li role="presentation">
+        <button id="tab-btn-papers" type="button" role="tab" data-tab="tab-papers" aria-controls="tab-papers" aria-selected="false">Papers</button>
+        </li>
+        <li role="presentation">
           <button id="tab-btn-contact" type="button" role="tab" data-tab="tab-contact" aria-controls="tab-contact" aria-selected="false">Contact</button>
         </li>
       </ul>
@@ -86,8 +89,7 @@
           <div class="intro-text">
             <h2>Building atmospheric data and ML solutions for real-world systems</h2>
             <h3>Hi! My name is Dylan.</h3>
-            <p>I work at the intersection of atmospheric science, software development, and applied machine learning. My passion is
-               turning noisy remote-sensing and dynamical system data into robust predictions and production
+            <p>I live at the intersection of atmospheric science, software development, and applied machine learning. My passions turn noisy remote-sensing and dynamical system data into robust predictions and production
                pipelines.</p>
           </div>
         </div>
@@ -95,21 +97,21 @@
       <div class="card">
         <h2>About Me</h2>
           <p>I'm an atmospheric scientist with a numerical weather prediction background, currently working at SeekOps in
-            Austin, TX, developing methane detection and quantification methods using UAV sensor data.
-            My work blends atmospheric transport physics/chemistry, statistical modeling, and applied
-            machine learning to solve real-world environmental monitoring problems.</p>
-          <p>At Texas A&amp;M, I completed an Atmospheric Science MS focused on experiments with a hybrid weather prediction model (physics/ML) and data assimilation for atmospheric prediction. Across research and industry roles, I've focused on connecting physical understanding of the atmosphere with the engineering needed to make
-            models and pipelines reliable in production and adopted by users.</p>
+            Austin, TX, developing methane (+carbon dioxide now!) detection and quantification methods using UAV sensor data.
+            My work blends atmospheric transport physics, statistical modeling, and applied
+            machine learning to solve environmental monitoring challenges for our clients.</p>
+          <p>At Texas A&amp;M, I completed an Atmospheric Science MS focused on experiments with a hybrid weather prediction model (physics/ML) combined with data assimilation for atmospheric prediction. At UC Santa Cruz, I earned a BS in Earth and Planetary Science. Across research and industry roles, I've focused on connecting a physical understanding of the atmosphere with the engineering and high performance computing experience needed to make
+            models and pipelines reliable in practice.</p>
         </div>
+
         <div class="card">
           <h2>Core Skills</h2>
           <div class="skills-grid">
-           <p><strong>Domain Knowledge:</strong> numerical weather prediction, data assimilation, atmospheric and oceanic transport modeling, methane detection &amp; quantification</p>
-           <p><strong>Machine Learning:</strong> reservoir computing, hybrid physics-ML methods, model evaluation, predictive modeling</p>
-           <p><strong>Languages:</strong> bash, Python, SQL, FORTRAN, JavaScript</p>
-           <p><strong>Data Engineering:</strong> ETL workflows, batch processing, reproducible analytics pipelines</p>
-           <p><strong>Cloud &amp; Systems:</strong> AWS EC2, Linux, cron automation, HPC environments</p>
-           <p><strong>Domain Tools:</strong> LiDAR processing, atmospheric sensor data, UAV-based environmental sensing</p>
+           <p><strong>Domain Knowledge:</strong> numerical weather prediction, climate modeling, data assimilation, ensembles, atmospheric and oceanic transport modeling, signal processing, methane detection &amp; quantification</p>
+           <p><strong>Machine Learning/data wrangling:</strong> hybrid physics-ML methods via reservoir computing (echo state neural networks), computer vision modeling, training and evaluation, feature engineering, predictive modeling</p>
+           <p><strong>Languages:</strong> Bash/Zsh, Python, Fortran 90, SQL, JavaScript, Excel</p>
+           <p><strong>Data Engineering:</strong> Git, ETL workflows, batch processing, reproducible analytics pipelines, load balancing</p>
+           <p><strong>Cloud &amp; Systems:</strong> AWS EC2, Azure, Linux, cron automation, HPC environments</p>
           </div>
       </div>
 
@@ -146,7 +148,22 @@
         <button type="button" class="panel-nav-btn panel-nav-btn--next" data-tab="tab-contact">Contact →</button>
       </nav>
     </div>
-
+    
+    <!-- ---- PAPERS ---- -->
+    <div id="tab-papers" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-papers">
+      <div class="card">
+        <h2>Papers &amp; Publications</h2>
+        <p>Peer-reviewed and preprint work.</p>
+        <!-- Rendered by scripts/papers.js -->
+        <div id="papers-mount"></div>
+      </div>
+    
+      <nav class="panel-nav" aria-label="Section navigation">
+        <button type="button" class="panel-nav-btn" data-tab="tab-projects">← Projects</button>
+        <button type="button" class="panel-nav-btn panel-nav-btn--next" data-tab="tab-contact">Contact →</button>
+      </nav>
+    </div>  
+    
     <!-- ---- CONTACT ---- -->
     <div id="tab-contact" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-contact">
       <div class="card">
