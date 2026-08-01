@@ -133,7 +133,7 @@
     if (headJob) {
       var headBadge = document.createElement('div');
       headBadge.className = 'branch-head mono';
-      headBadge.textContent = '⎇ HEAD → ' + headJob.id;
+      headBadge.textContent = 'HEAD → ' + headJob.id;
       timeline.appendChild(headBadge);
     }
 
