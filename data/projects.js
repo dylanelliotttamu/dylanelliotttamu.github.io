@@ -5,12 +5,12 @@ const projects = [
     description: "Research project focused on improving atmospheric forecast behavior with a hybrid ML plus data-assimilation workflow. Implemented an iterative reservoir-computing approach on AGCM simulations and evaluated stability across successive forecast cycles. Outcome: a reproducible experiment framework and thesis-supported results prepared for manuscript submission.",
     tech: ["Python", "FORTRAN", "HPC", "Reservoir Computing", "NumPy", "Matplotlib"],
     status: "Research Completed",
-    date: "2023-12",
+    date: "2024-12",
     link: null,
     files: [
       { name: "README.md", desc: "Project overview and results" },
       { name: "tech_stack.txt", desc: "Python · FORTRAN · HPC · Reservoir Computing" },
-      { name: "status.txt", desc: "Manuscript submitted — Fall 2024 thesis defense" }
+      { name: "status.txt", desc: "Manuscript accepted — Jul 2026 " }
     ]
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     description: "Engineering project to automate LiDAR elevation extraction at target coordinates. Built a modular Python pipeline tuned for large point-cloud datasets on standard hardware, reducing manual processing effort and improving repeatability. Outcome: reusable workflow adopted for operational catastrophe-claims analysis.",
     tech: ["Python", "LiDAR", "Open Source", "pandas", "laspy"],
     status: "Complete",
-    date: "2022-06",
+    date: "2024-04",
     link: null,
     files: [
       { name: "README.md", desc: "LiDAR elevation extraction tool" },
@@ -30,11 +30,11 @@ const projects = [
   {
     id: "wavepoolweather",
     name: "WavePoolWeather.com",
-    description: "Automated forecasting site for inland wave-pool water temperature guidance. Hourly NWS data feeds a physics-based thermal model (solar radiation, evaporative cooling, ambient heat exchange) to estimate pool surface temperature; Apache on AWS EC2 serves the output. A GitHub Actions CI/CD pipeline runs tests on every push and auto-deploys to the server on merge to main. Outcome: zero-touch public forecast tool with full automation from data ingest to live deployment.",
+    description: "Real-time automated condition forecasting site for inland wave-pool user guidance. Hourly weather API-retrieved data feeds a physics-based thermal model (solar radiation, evaporative cooling, ambient heat exchange) to estimate pool surface temperature, and many other features; Apache on AWS EC2 serves the output. A GitHub Actions CI/CD pipeline runs tests on every push and auto-deploys to the server on merge to main. Outcome: zero-touch public forecast tool with full automation from data ingest to live deployment.",
     tech: ["Python", "AWS EC2", "Apache", "HTML", "CSS", "NWS API", "cron", "GitHub Actions", "CI/CD"],
-    status: "Live",
-    date: "2023-03",
-    link: "http://www.wavepoolweather.com",
+    status: "Deployed",
+    date: "2024-09",
+    link: "https://www.wavepoolweather.com",
     files: [
       { name: "README.md", desc: "Wave pool water temperature forecast site" },
       { name: "thermal_model.py", desc: "Physics-based pool temperature model — solar radiation, evaporative cooling, ambient heat exchange" },

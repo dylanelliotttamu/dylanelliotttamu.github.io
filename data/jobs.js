@@ -37,7 +37,7 @@ const jobs = [
     role: "Data Analyst",
     location: "Remote",
     start: "2023-07",
-    end: "2024-07",
+    end: "2024-05",
     type: "job",
     head: false,
     bullets: [
