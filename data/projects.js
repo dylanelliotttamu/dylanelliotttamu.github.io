@@ -7,6 +7,7 @@ const projects = [
     status: "Research Completed",
     date: "2024-12",
     link: null,
+    image: "data/images/rmse_q_0.2_10day_Wx.png",
     files: [
       { name: "README.md", desc: "Project overview and results" },
       { name: "tech_stack.txt", desc: "Python · FORTRAN · HPC · Reservoir Computing" },
@@ -21,6 +22,7 @@ const projects = [
     status: "Complete",
     date: "2024-04",
     link: null,
+    image: "data/images/lidar_elev_preview.png",
     files: [
       { name: "README.md", desc: "LiDAR elevation extraction tool" },
       { name: "tech_stack.txt", desc: "Python · laspy · pandas · Open Source" },
@@ -30,11 +32,12 @@ const projects = [
   {
     id: "wavepoolweather",
     name: "WavePoolWeather.com",
-    description: "Real-time automated condition forecasting site for inland wave-pool user guidance. Hourly weather API-retrieved data feeds a physics-based thermal model (solar radiation, evaporative cooling, ambient heat exchange) to estimate pool surface temperature, and many other features; Apache on AWS EC2 serves the output. A GitHub Actions CI/CD pipeline runs tests on every push and auto-deploys to the server on merge to main. Outcome: zero-touch public forecast tool with full automation from data ingest to live deployment.",
+    description: "Real-time automated forecasting site for wave-pool guidance. Hourly weather API-retrieved data feeds a physics-based thermal model (solar radiation, evaporative cooling, ambient heat exchange) to estimate pool surface temperature, and many other features; Apache on AWS EC2 serves the output. A GitHub Actions CI/CD pipeline runs tests on every push and auto-deploys to the server on merge to main. Outcome: zero-touch public forecast tool with full automation from data ingest to live deployment.",
     tech: ["Python", "AWS EC2", "Apache", "HTML", "CSS", "NWS API", "cron", "GitHub Actions", "CI/CD"],
     status: "Deployed",
     date: "2024-09",
     link: "https://www.wavepoolweather.com",
+    image: "data/images/WPW_preview.png",
     files: [
       { name: "README.md", desc: "Wave pool water temperature forecast site" },
       { name: "thermal_model.py", desc: "Physics-based pool temperature model — solar radiation, evaporative cooling, ambient heat exchange" },

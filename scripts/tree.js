@@ -66,6 +66,9 @@
     detail.className = 'tree-detail';
 
     detail.innerHTML =
+      (proj.image
+        ? '<img class="tree-detail-image" src="' + escapeHtml(proj.image) + '" alt="' + escapeHtml(proj.name) + ' screenshot" loading="lazy">'
+        : '') +
       '<p>' + escapeHtml(proj.description) + '</p>' +
       '<div class="detail-tags">' +
         proj.tech.map(function (t) {

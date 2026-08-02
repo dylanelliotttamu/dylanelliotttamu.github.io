@@ -161,6 +161,22 @@
   display: block;
 }
 
+.tree-detail-image {
+  max-width: 100%;
+  width: var(--img-w, 280px);
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+  display: block;
+}
+
+.tree-detail-image:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: box-shadow 0.25s ease;
+}
+
 .tree-detail .detail-link {
   display: inline-block;
   margin-top: 0.6em;
@@ -196,5 +212,8 @@
   }
   .tree-date {
     display: none;
+  }
+  .tree-detail-image {
+    width: clamp(120px, 40vw, var(--img-w, 280px));
   }
 }
