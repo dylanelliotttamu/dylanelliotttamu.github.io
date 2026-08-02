@@ -1,0 +1,145 @@
+/* ============================================================
+   papers.css — GitHub-tree-style expandable paper list
+   (mirrors tree.css conventions)
+   ============================================================ */
+.paper-tree-container {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.paper-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.paper-node {
+  position: relative;
+}
+
+/* ---- Row ---- */
+.paper-node-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 4px 6px 4px 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+
+.paper-node-row:hover {
+  background: rgba(88, 6, 6, 0.05);
+}
+.paper-node-row:focus {
+  outline: 2px solid #1b3d9b;
+  outline-offset: -2px;
+}
+
+/* ---- Chevron ---- */
+.paper-chevron {
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  color: #777;
+  font-style: normal;
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.paper-node.open > .paper-node-row .paper-chevron {
+  transform: rotate(90deg);
+}
+
+/* ---- Icon ---- */
+.paper-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ---- Name + meta ---- */
+.paper-name {
+  color: #333;
+  font-weight: 400;
+  flex: 1 1 auto;
+  white-space: normal;
+  word-break: break-word;
+  min-width: 0;
+}
+
+.paper-side {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+  min-width: 0;
+  flex: 1 1 auto; 
+  padding-top: 0.05em; /* nudge to align with first line of title */
+}
+
+.paper-meta {
+  color: #777;
+  font-size: 0.8rem;
+  white-space: normal;
+  word-break: break-word;
+  min-width: 0; 
+}
+
+.paper-date {
+  color: #999;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---- Collapsible detail panel ---- */
+.paper-detail {
+  display: none;
+  background: #f9f6f6;
+  border: 1px solid #e8dede;
+  border-radius: 6px;
+  padding: 1em 1.2em;
+  margin: 0.5em 0 0.5em 1.8em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #444;
+}
+.paper-node.open > .paper-detail {
+  display: block;
+}
+.paper-detail-desc {
+  margin: 0 0 0.4em;
+}
+.paper-detail .detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.6em;
+}
+.paper-detail .tag {
+  background: #f0e8e8;
+  color: #580606;
+  border-radius: 3px;
+  padding: 2px 7px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  text-decoration: none;
+}
+.paper-detail .tag:hover {
+  text-decoration: underline;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .paper-meta {
+    display: none;
+  }
+  .paper-date {
+    display: none;
+  }
+}
