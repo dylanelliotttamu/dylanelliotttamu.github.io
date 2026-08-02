@@ -67,12 +67,14 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   padding: 2em;
   margin-bottom: 2em;
-  transition: background 0.25s ease, box-shadow 0.25s ease;
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
 }
 
 .card:hover {
   background: rgba(255, 255, 255, 1);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
 }
 
 .card h2 {

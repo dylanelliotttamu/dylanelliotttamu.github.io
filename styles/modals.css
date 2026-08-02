@@ -1,0 +1,120 @@
+/* ============================================================
+   modals.css — card modal overlays and animations
+   ============================================================ */
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.modal:not([hidden]) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  padding: 2.5em;
+  max-width: 600px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  transform: scale(0.95);
+  transition: transform 0.25s ease;
+}
+
+.modal:not([hidden]) .modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.2em;
+  right: 1.2em;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #777;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #580606;
+  background: rgba(88, 6, 6, 0.08);
+}
+
+.modal-close:focus-visible {
+  outline: 2px solid #ffeb3b;
+  outline-offset: 2px;
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: #580606;
+  border-bottom: 2px solid #f0e0e0;
+  padding-bottom: 0.4em;
+  font-size: 1.6rem;
+}
+
+.modal #modal-body {
+  margin-top: 1.2em;
+  line-height: 1.6;
+  color: #444;
+}
+
+.modal #modal-body p {
+  margin: 0 0 1em 0;
+}
+
+.modal #modal-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 2em;
+    max-height: 90vh;
+  }
+
+  .modal-close {
+    top: 1em;
+    right: 1em;
+    font-size: 1.5rem;
+  }
+
+  .modal h2 {
+    font-size: 1.3rem;
+  }
+}
