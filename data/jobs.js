@@ -2,7 +2,7 @@ const jobs = [
   {
     id: "seekops",
     company: "SeekOps",
-    role: "Data Analyst",
+    role: "Environmental Data Analyst II",
     location: "Austin, TX - Hybrid",
     start: "2024-11",
     end: "Present",
